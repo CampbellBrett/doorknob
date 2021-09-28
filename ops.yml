@@ -2,7 +2,7 @@
 version: "1"
 services:
   # Unique identifier for your op (required)
-  - name: doorknobs:1.0.0
+  - name: doorknob:1.0.0
     domain: ""
     # Determines whether this version of the op is visible to other people
     public: false
