@@ -2,7 +2,7 @@
 version: "1"
 services:
   # Unique identifier for your op (required)
-  - name: doorknobs:1.0.0
+  - name: doorknob:1.0.3
     domain: ""
     # Determines whether this version of the op is visible to other people
     public: false
@@ -22,5 +22,9 @@ services:
     mountHome: false
     port: [ '8080:8080' ]
     events:
-      - "github:CampbellBrett/doorknob:push:ref==master"
-    trigger: ['build', 'publish', 'start']    
+      - "github:CampbellBrett/doorknob:pull_request.opened"
+      - "github:CampbellBrett/doorknob:pull_request.synchronize"
+    trigger:
+      - build
+      - publish
+      - start
