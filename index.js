@@ -4,7 +4,7 @@ const http = require('http')
 async function main() {
   const requestListener = function (req, res) {
     res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.write(JSON.stringify(JSON.stringify({"message": "HEROKU is the best of the best"})))
+    res.write(JSON.stringify(JSON.stringify({"message": "Coheed is the best of the best"})))
     res.end()
   }
 
