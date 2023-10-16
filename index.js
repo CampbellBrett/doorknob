@@ -1,11 +1,11 @@
 const { sdk } = require('@cto.ai/sdk')
-const http = require('http');
+const http = require('http')
 
 async function main() {
   const requestListener = function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.write(JSON.stringify({ "message": "Brett is the best of the best" }));
-    res.end();
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.write(JSON.stringify({ "message": "Stuff is the best of the best" })))
+    res.end()
   }
 
   const server = http.createServer(requestListener)
